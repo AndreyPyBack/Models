@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Курсы лист</title>
+</head>
+<body>
+    <h1>Курсы</h1>
+    <ul>
+        {% for course in courses %}
+            <li>{{ course.name }} --- Students: {{ course.students.all|join:", " }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_course' %}">Добавить новый курс</a>
+</body>
+</html>

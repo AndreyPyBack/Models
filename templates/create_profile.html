@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Новый профиль</title>
+</head>
+<body>
+    <h1>Новый профиль</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Создать</button>
+    </form>
+    <a href="{% url 'profile_list' %}">Обратно</a>
+</body>
+</html>

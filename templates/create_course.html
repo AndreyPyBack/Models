@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Создать курс</title>
+</head>
+<body>
+    <h1>Создать курс</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Создать</button>
+    </form>
+    <a href="{% url 'course_list' %}">Посмотреть список курсов</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile лист</title>
+</head>
+<body>
+    <h1></h1>
+    <ul>
+        {% for profile in profiles %}
+            <li>{{ profile.user.username }} - {{ profile.bio }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_profile' %}">Добавить новый профиль</a>
+</body>
+</html>
